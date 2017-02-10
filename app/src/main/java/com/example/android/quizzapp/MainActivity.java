@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -101,5 +102,20 @@ public class MainActivity extends AppCompatActivity {
 
         Toast finalGrade = Toast.makeText(MainActivity.this, "Your total score is: " + score, Toast.LENGTH_LONG);
         finalGrade.show();
+
+        RadioGroup radioGroupOne = (RadioGroup) findViewById(R.id.swallow_radio_group);
+        RadioGroup radioGroupTwo = (RadioGroup) findViewById(R.id.true_or_false_radio);
+        radioGroupOne.clearCheck();
+        radioGroupTwo.clearCheck();
+        CheckBox pebbles = (CheckBox) findViewById(R.id.checkbox_1);
+        CheckBox wood = (CheckBox) findViewById(R.id.checkbox_2);
+        CheckBox aDuck = (CheckBox) findViewById(R.id.checkbox_3);
+        CheckBox aWitch = (CheckBox) findViewById(R.id.checkbox_4);
+        pebbles.setChecked(false);
+        wood.setChecked(false);
+        aDuck.setChecked(false);
+        aWitch.setChecked(false);
+
+        score = 0;
     }
 }
