@@ -38,9 +38,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@id/top_bar_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar_layout"
         android:orientation="vertical"
         android:paddingBottom="10dp">
 
@@ -127,38 +127,43 @@
                     android:textColor="@color/question_text_color"
                     android:textSize="@dimen/question_text_size" />
 
-                <RadioButton
-                    android:id="@+id/a_button"
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:buttonTint="@color/button_tint_color"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/radio_1"
-                    android:textColor="@color/secondary_text_color" />
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/b_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:buttonTint="@color/button_tint_color"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/radio_2"
-                    android:textColor="@color/secondary_text_color" />
+                    <RadioButton
+                        android:id="@+id/a_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:buttonTint="@color/button_tint_color"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/radio_1"
+                        android:textColor="@color/secondary_text_color" />
 
-                <RadioButton
-                    android:id="@+id/c_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:buttonTint="@color/button_tint_color"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/radio_3"
-                    android:textColor="@color/secondary_text_color" />
+                    <RadioButton
+                        android:id="@+id/b_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:buttonTint="@color/button_tint_color"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/radio_2"
+                        android:textColor="@color/secondary_text_color" />
+
+                    <RadioButton
+                        android:id="@+id/c_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:buttonTint="@color/button_tint_color"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/radio_3"
+                        android:textColor="@color/secondary_text_color" />
+                </RadioGroup>
 
                 <TextView
                     android:id="@+id/question_three_view"
@@ -187,27 +192,32 @@
                     android:textColor="@color/question_text_color"
                     android:textSize="@dimen/question_text_size" />
 
-                <RadioButton
-                    android:id="@+id/radio_true"
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:buttonTint="@color/button_tint_color"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/radio_true"
-                    android:textColor="@color/secondary_text_color" />
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/radio_false"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:buttonTint="@color/button_tint_color"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/radio_false"
-                    android:textColor="@color/secondary_text_color" />
+                    <RadioButton
+                        android:id="@+id/radio_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:buttonTint="@color/button_tint_color"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/radio_true"
+                        android:textColor="@color/secondary_text_color" />
+
+                    <RadioButton
+                        android:id="@+id/radio_false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:buttonTint="@color/button_tint_color"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/radio_false"
+                        android:textColor="@color/secondary_text_color" />
+                </RadioGroup>
 
                 <TextView
                     android:id="@+id/question_five_view"
@@ -225,6 +235,7 @@
                     android:inputType="number"
                     android:textColor="@color/secondary_text_color"
                     android:textSize="@dimen/edit_text_size" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp" />
@@ -234,9 +245,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/submit_answers"
@@ -247,7 +258,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@color/button_tint_color"
-            android:text="@string/submit_button"
-            android:onClick="gradeQuiz"/>
+            android:onClick="gradeQuiz"
+            android:text="@string/submit_button" />
     </LinearLayout>
 </RelativeLayout>
