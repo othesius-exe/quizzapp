@@ -114,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
         Toast finalGrade = Toast.makeText(MainActivity.this, "Your total score is: " + score + "/10", Toast.LENGTH_LONG);
         finalGrade.show();
 
+        /**
+         * Clears all fields
+         */
         RadioGroup radioGroupOne = (RadioGroup) findViewById(R.id.swallow_radio_group);
         RadioGroup radioGroupTwo = (RadioGroup) findViewById(R.id.true_or_false_radio);
         radioGroupOne.clearCheck();
@@ -126,6 +129,12 @@ public class MainActivity extends AppCompatActivity {
         wood.setChecked(false);
         aDuck.setChecked(false);
         aWitch.setChecked(false);
+        EditText response = (EditText) findViewById(R.id.question_five_text);
+        response.setText("");
+        EditText nameView = (EditText) findViewById(R.id.name_bar);
+        nameView.setText("");
+        EditText nameQuestion = (EditText) findViewById(R.id.name_question);
+        nameQuestion.setText("");
 
         score = 0;
     }
