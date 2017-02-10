@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * Evaluates the score for question 1. 2 points possible
      */
     public int questionOne() {
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return score;
     }
+
     /**
      * Evaluates Score for question 2. 1 point possible.
      */
@@ -60,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * @return Checks that the user knows their name. 1 point possible if names match
      */
     public int getName() {
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return score;
     }
+
     /**
      * Evaluates the score for question 4. 1 point possible.
      */
@@ -82,18 +83,19 @@ public class MainActivity extends AppCompatActivity {
         RadioButton trueButton = (RadioButton) findViewById(R.id.radio_true);
         RadioButton falseButton = (RadioButton) findViewById(R.id.radio_false);
 
-        if (trueButton.isChecked()){
+        if (trueButton.isChecked()) {
             score += 1;
         }
         return score;
     }
+
     /**
      * Evaluates the answer for question 5. Worth 5 points.
      */
     public int questionFive() {
         EditText response = (EditText) findViewById(R.id.question_five_text);
         String userResponse = response.getText().toString().trim();
-        if ( userResponse.equals("1998")) {
+        if (userResponse.equals("1998")) {
             score += 5;
         }
         return score;
@@ -101,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
      * @param view On Button Click this will calculate the grade and present a toast with the score.
      */
     public void gradeQuiz(View view) {
