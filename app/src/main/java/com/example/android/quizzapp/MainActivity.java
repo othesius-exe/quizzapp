@@ -27,18 +27,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox wood = (CheckBox) findViewById(R.id.checkbox_2);
         CheckBox aDuck = (CheckBox) findViewById(R.id.checkbox_3);
         CheckBox aWitch = (CheckBox) findViewById(R.id.checkbox_4);
-
-        if (pebbles.isChecked()) {
-            score += 0;
-        }
-        if (wood.isChecked()) {
-            score += 1;
-        }
-        if (aDuck.isChecked()) {
-            score += 1;
-        }
-        if (aWitch.isChecked()) {
-            score += 0;
+        if (!pebbles.isChecked() && wood.isChecked() && aDuck.isChecked() && !aWitch.isChecked()) {
+            score += 2;
         }
         return score;
     }
@@ -49,13 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     public int questionTwo() {
         RadioButton aButton = (RadioButton) findViewById(R.id.a_button);
-        RadioButton bButton = (RadioButton) findViewById(R.id.b_button);
-        RadioButton cButton = (RadioButton) findViewById(R.id.c_button);
-
         if (aButton.isChecked()) {
             score += 1;
-        } else {
-            score += 0;
         }
         return score;
     }
@@ -68,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
         EditText nameQuestion = (EditText) findViewById(R.id.name_question);
         String nameOne = nameView.getText().toString().toLowerCase().trim();
         String nameTwo = nameQuestion.getText().toString().toLowerCase().trim();
-
-        if (nameOne.equals(nameTwo)) {
+        if (!nameOne.equals("") && nameOne.equals(nameTwo)) {
             score += 1;
         }
         return score;
@@ -81,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
     public int questionFour() {
         RadioButton trueButton = (RadioButton) findViewById(R.id.radio_true);
-        RadioButton falseButton = (RadioButton) findViewById(R.id.radio_false);
-
         if (trueButton.isChecked()) {
             score += 1;
         }
@@ -100,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return score;
     }
-
 
     /**
      * @param view On Button Click this will calculate the grade and present a toast with the score.
