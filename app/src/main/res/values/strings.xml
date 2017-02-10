@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">QuizzApp</string>
+
+    <!-- Name and date fields -->
+    <string name="name_bar">Name</string>
+    <string name="date_bar">Date</string>
+
+    <!-- Question 1 strings -->
+    <string name="question_1">Which of these things floats? (Check all that apply) </string>
+    <string name="check_1">Very small rocks</string>
+    <string name="check_2">Wood</string>
+    <string name="check_3">A duck</string>
+    <string name="check_4">A Witch</string>
+
+    <!-- Question 2 strings -->
+    <string name="question_2">What is the windspeed velocity of an African swallow? </string>
+    <string name="radio_1">11 metres per second</string>
+    <string name="radio_2">25 metres per second</string>
+    <string name="radio_3">100 metres per second</string>
+
+    <!-- Question 3 strings -->
+    <string name="question_3">What is your name? </string>
+    <string name="question_3_response">Type Answer Here</string>
+
+    <!-- Question 4 strings -->
+    <string name="question_4">This statement is false. </string>
+    <string name="radio_true">True</string>
+    <string name="radio_false">False</string>
+
+    <!-- Question 5 strings -->
+    <string name="question_5">What type of cheese makes up Earth\'s moon?</string>
+    <string name="gouda">Gouda, Cheddar, Swiss etc&#8230;</string>
+
+    <string name="submit_button">Grade Now!</string>
+
 </resources>
