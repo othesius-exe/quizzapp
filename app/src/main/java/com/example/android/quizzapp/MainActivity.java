@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
     public int getName() {
         EditText nameView = (EditText) findViewById(R.id.name_bar);
         EditText nameQuestion = (EditText) findViewById(R.id.name_question);
+        String nameOne = nameView.getText().toString().toLowerCase().trim();
+        String nameTwo = nameQuestion.getText().toString().toLowerCase().trim();
 
-        if (nameQuestion == nameView) {
+        if (nameOne.equals(nameTwo)) {
             score += 1;
         }
         return score;
@@ -88,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Evaluates the answer for question 5. Worth 5 points.
      */
+    public int questionFive() {
+        EditText response = (EditText) findViewById(R.id.question_five_text);
+        String userResponse = response.getText().toString().trim();
+        if ( userResponse.equals("1998")) {
+            score += 5;
+        }
+        return score;
+    }
 
 
     /**
@@ -99,8 +109,9 @@ public class MainActivity extends AppCompatActivity {
         questionTwo();
         getName();
         questionFour();
+        questionFive();
 
-        Toast finalGrade = Toast.makeText(MainActivity.this, "Your total score is: " + score, Toast.LENGTH_LONG);
+        Toast finalGrade = Toast.makeText(MainActivity.this, "Your total score is: " + score + "/10", Toast.LENGTH_LONG);
         finalGrade.show();
 
         RadioGroup radioGroupOne = (RadioGroup) findViewById(R.id.swallow_radio_group);
