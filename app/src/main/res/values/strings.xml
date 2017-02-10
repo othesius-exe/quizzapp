@@ -23,13 +23,13 @@
     <string name="question_3_response">Type Answer Here</string>
 
     <!-- Question 4 strings -->
-    <string name="question_4">This statement is false. </string>
+    <string name="question_4">Java is a high level programming language.</string>
     <string name="radio_true">True</string>
     <string name="radio_false">False</string>
 
     <!-- Question 5 strings -->
-    <string name="question_5">What type of cheese makes up Earth\'s moon?</string>
-    <string name="gouda">Gouda, Cheddar, Swiss etc&#8230;</string>
+    <string name="question_5">In what year was google founded?</string>
+    <string name="google">Google</string>
 
     <string name="submit_button">Grade Now!</string>
 
